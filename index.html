@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>房子计时器！</title>
+  <title>嘛噜和枫枫的小主页</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -98,13 +98,8 @@
 <header class="am-topbar am-topbar-fixed-top">
   <div class="am-container">
     <h1 class="am-topbar-brand">
-      <a href="#">一个计时器测试</a>
+      <a href="#">一个计时器&正在开发的好多功能！</a>
     </h1>
-
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
-            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
-        class="am-icon-bars"></span></button>
-
 
     </div>
   </div>
@@ -113,7 +108,7 @@
 <div class="get">
   <div class="am-g">
     <div class="col-lg-12">
-      <h1 class="get-title">记得上线保房啦！</h1>
+      <h1 class="get-title">记得上线保房啦！（目前是这样）</h1>
     </div>
   </div>
 </div>
@@ -121,42 +116,40 @@
 <div class="detail">
   <div class="am-g am-container">
     <div class="col-lg-12">
-      <h2 class="detail-h2">这些都是你要去的房子</h2>
+      <h2 class="detail-h2">这些都是要写完的功能！</h2>
 
       <div class="am-g">
 	  
         <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
           <h3 class="detail-h3">
-            神意之地 森1-23
+            神意之地的好多房子！
           </h3>
 
           <p class="detail-p">
             <span>
 				<script>
 	
-						var house1 = new Date();
+						var houseDate = new Date();
 						
-						house1.setDate(21);
-						house1.setMonth(3);
-						house1.setYear(2019);
+						houseDate.setDate(10);
+						houseDate.setMonth(6);
+						houseDate.setYear(2019);
 					
-
-
 						var nowDate = new Date();
-						var seperator1 = "-";
-						var seperator2 = ":";;
+						var seperator1 = ".";
 						
 						var checkFlag = false;
 						
-						var dateTemp = new Date();
-						dateTemp.setTime(house1.getTime());
+						var dateTimeout = new Date();
+						var dayTimeout = 0;
+						dateTimeout.setTime(houseDate.getTime());
 						
 						while (checkFlag == false)
 						{
 							
-  　　						var dayTimeout = parseInt((nowDate.getTime() - dateTemp.getTime()) / (1000 * 60 * 60 * 24));
+  　　						dayTimeout = parseInt((nowDate.getTime() - dateTimeout.getTime()) / (1000 * 60 * 60 * 24));
 							
-							dateTemp.setTime(dateTemp.getTime() + 35 * (1000 * 60 * 60 * 24) );
+							dateTimeout.setTime(dateTimeout.getTime() + 35 * (1000 * 60 * 60 * 24) );
 							
 							if (dayTimeout < 35)
 							{
@@ -164,8 +157,10 @@
 							}
 						}
 						
-						var month = dateTemp.getMonth() + 1;
-						var strDate = dateTemp.getDate()
+						dayTimeout = parseInt((dateTimeout.getTime() - nowDate.getTime()) / (1000 * 60 * 60 * 24));
+						
+						var month = dateTimeout.getMonth() + 1;
+						var strDate = dateTimeout.getDate()
 						
 						if (month >= 1 && month <= 9) {
 							month = "0" + month;
@@ -174,9 +169,9 @@
 							strDate = "0" + strDate;
 						}
 						
-						var currentdate = dateTemp.getFullYear() + seperator1 + month + seperator1 + strDate;
+						var currentdate = dateTimeout.getFullYear() + seperator1 + month + seperator1 + strDate;
 						
-						document.write(currentdate);
+						document.write(currentdate,"，还有", dayTimeout, "天！");
 					
 				</script>
 			</span>
@@ -185,30 +180,29 @@
 		
         <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
           <h3 class="detail-h3">
-            神意之地 海2-34
+            唔 日程表！
           </h3>
 
           <p class="detail-p">
-            下次时间
+            正在做了.jpg
           </p>
         </div>
 		
         <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
           <h3 class="detail-h3">
-            不知道写什么
+            还有日记！
           </h3>
 
           <p class="detail-p">
-			先空着
+			咕咕咕.jpg
           </p>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
           <h3 class="detail-h3">
-            也不知道写什么
+            还可以加其他倒计时！
           </h3>
-
           <p class="detail-p">
-            空一会
+            这个做起来应该很快！
           </p>
         </div>
       </div>
@@ -218,7 +212,7 @@
 
 
 <footer class="footer">
-  <p>Yomikaede.</p>
+  <p>MaruuTako和Yomikaede.</p>
 </footer>
 
 <script src="assets/js/zepto.min.js"></script>
