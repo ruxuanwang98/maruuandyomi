@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Landing Page | Amaze UI Example</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: #1E5B94;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+  </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">一个计时器测试</a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+
+    </div>
+  </div>
+</header>
+
+<div class="get">
+  <div class="am-g">
+    <div class="col-lg-12">
+      <h1 class="get-title">记得上线保房啦！</h1>
+    </div>
+  </div>
+</div>
+
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="col-lg-12">
+      <h2 class="detail-h2">这些都是你要去的房子</h2>
+
+      <div class="am-g">
+	  
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            神意之地 森1-23
+          </h3>
+
+          <p class="detail-p">
+            <span>
+				<script>
+	
+						var house1 = new Date();
+						
+						house1.setDate(21);
+						house1.setMonth(3);
+						house1.setYear(2019);
+					
+
+
+						var nowDate = new Date();
+						var seperator1 = "-";
+						var seperator2 = ":";;
+						
+						var checkFlag = false;
+						
+						var dateTemp = new Date();
+						dateTemp.setTime(house1.getTime());
+						
+						while (checkFlag == false)
+						{
+							
+  　　						var dayTimeout = parseInt((nowDate.getTime() - dateTemp.getTime()) / (1000 * 60 * 60 * 24));
+							
+							dateTemp.setTime(dateTemp.getTime() + 35 * (1000 * 60 * 60 * 24) );
+							
+							if (dayTimeout < 35)
+							{
+								checkFlag = true;
+							}
+						}
+						
+						var month = dateTemp.getMonth() + 1;
+						var strDate = dateTemp.getDate()
+						
+						if (month >= 1 && month <= 9) {
+							month = "0" + month;
+						}
+						if (strDate >= 0 && strDate <= 9) {
+							strDate = "0" + strDate;
+						}
+						
+						var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
+						
+						document.write(currentdate);
+					
+				</script>
+			</span>
+          </p>
+        </div>
+		
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            神意之地 海2-34
+          </h3>
+
+          <p class="detail-p">
+            下次时间
+          </p>
+        </div>
+		
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            不知道写什么
+          </h3>
+
+          <p class="detail-p">
+			先空着
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 detail-mb">
+          <h3 class="detail-h3">
+            <i class="am-icon-send-o am-icon-sm"></i>
+            也不知道写什么
+          </h3>
+
+          <p class="detail-p">
+            空一会
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <p>Yomikaede.</p>
+</footer>
+
+<script src="assets/js/zepto.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+
+
+
+
+
+
+</body>
+</html>
